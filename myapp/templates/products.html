@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- records = [(1,"iphone1.jpg",iphone16,60000),(1,"iphone2.jpg",iphone15,50000)] -->
+    {% for i in records %}
+    <div class="product" style="border: 2px solid white; width: 23%; margin-bottom: 30px; padding: 30px;">
+        <img src="{{i.image.url}}" alt="">
+        <h2>{{i.name}}</h2>
+        <p>{{i.price}}</p>
+        <button type="submit">Add to cart</button>
+        <button type="submit">Buy Now</button>
+    </div>
+    {% endfor %}
+</body>
+</html>
